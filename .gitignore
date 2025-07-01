@@ -1,0 +1,77 @@
+# Ruby/Rails Backend
+backend/.env
+backend/config/master.key
+backend/config/credentials/*.key
+backend/log/*
+backend/tmp/*
+backend/storage/*
+backend/public/uploads
+backend/node_modules/
+backend/.byebug_history
+backend/coverage/
+backend/.DS_Store
+
+# React Frontend
+frontend/.env
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Database
+*.sqlite3
+*.db
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Build outputs
+build/
+dist/
+public/packs/
+public/assets/
+
+# Cache
+.cache/ 
