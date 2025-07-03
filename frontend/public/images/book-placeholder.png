@@ -1,0 +1,3 @@
+# This file represents a book cover placeholder image
+# In a real implementation, you would have an actual PNG file here
+# For now, we'll use CSS to create the placeholder in the BookCard component 

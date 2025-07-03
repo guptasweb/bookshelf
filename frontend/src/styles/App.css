@@ -1,0 +1,295 @@
+/* Tailwind CSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for the Bookshelf app */
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0b;
+  color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* App layout */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Custom utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Book card hover effects */
+.book-card {
+  transition: all 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+}
+
+/* Star rating animations */
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star-rating svg {
+  transition: color 0.2s ease;
+}
+
+.star-rating svg:hover {
+  transform: scale(1.1);
+}
+
+/* Button focus states */
+.btn-focus:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Search bar styles */
+.search-bar {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  border: 1px solid #374151;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+}
+
+/* Card styles */
+.card {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  border: 1px solid #374151;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #4b5563;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+}
+
+/* Navigation active state */
+.nav-active {
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* Form styles */
+.form-input {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Error states */
+.error-input {
+  border-color: #ef4444;
+}
+
+.error-input:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgb(239 68 68 / 0.1);
+}
+
+/* Success states */
+.success-border {
+  border-color: #10b981;
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero section background */
+.hero-bg {
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+              linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Book cover placeholder */
+.book-placeholder {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+/* Responsive design helpers */
+@media (max-width: 640px) {
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Custom component styles */
+.dropdown-menu {
+  background: #1f2937;
+  border: 1px solid #374151;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+  border-radius: 0.5rem;
+}
+
+.dropdown-item:hover {
+  background-color: #374151;
+}
+
+/* Rating stars */
+.rating-star {
+  color: #fbbf24;
+  transition: all 0.2s ease;
+}
+
+.rating-star.empty {
+  color: #4b5563;
+}
+
+.rating-star.interactive:hover {
+  color: #f59e0b;
+  transform: scale(1.1);
+}
+
+/* Book grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+} 
